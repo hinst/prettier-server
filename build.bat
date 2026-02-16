@@ -1,0 +1,1 @@
+docker build -t hinst/prettier-server --progress=plain --platform=linux/arm64 .

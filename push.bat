@@ -1,0 +1,1 @@
+docker push hinst/prettier-server
