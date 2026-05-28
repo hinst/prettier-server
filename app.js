@@ -1,3 +1,4 @@
+//@ts-check
 const express = require('express');
 const { spawnSync } = require('child_process');
 const path = require('path');
