@@ -6,7 +6,7 @@ const path = require('path');
 const PRETTIER_BIN = path.join(__dirname, 'node_modules', '.bin', 'prettier');
 
 const app = express();
-app.use(express.text({ type: '*/*' }));
+app.use(express.text({ type: '*/*', limit: '100mb' }));
 
 app.post('/', (request, response) => {
 	const { filename } = request.query;
