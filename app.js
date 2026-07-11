@@ -4,6 +4,7 @@ const { spawnSync } = require('child_process');
 const path = require('path');
 
 const PRETTIER_BIN = path.join(__dirname, 'node_modules', '.bin', 'prettier');
+const PORT_NUMBER = 3000;
 
 const app = express();
 app.use(express.text({ type: '*/*', limit: '100mb' }));
@@ -24,4 +25,4 @@ app.post('/', (request, response) => {
 		response.type('text/plain').send(result.stdout.toString());
 });
 
-app.listen(3000, () => console.log('Prettier server listening on port 3000'));
+app.listen(PORT_NUMBER, () => console.log('Prettier server listening on port ' + PORT_NUMBER));
